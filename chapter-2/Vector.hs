@@ -3,6 +3,9 @@ import Data.List
 -- Can be Vec Int or Vec Float
 data Vec t = Vec [t] Int deriving (Show, Eq, Ord)
 
+-- Adds two vectors
+-- Note: if the declared dimension of the vectors are different, it returns Nothing
+--       but it doesn't actually check the length of the list.
 (<+>) :: Num t => Vec t -> Vec t -> Maybe (Vec t)
 Vec v1 l1 <+> Vec v2 l2 | l1 == l2 = Just (Vec (zipWith (+) v1 v2) l1)
                         | l1 /= l2 = Nothing
