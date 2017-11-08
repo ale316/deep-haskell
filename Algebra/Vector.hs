@@ -27,5 +27,5 @@ Vec v1 |. Vec v2 | (length v1) == (length v2) = Just (foldr1 (*) (zipWith (+) v1
 
 -- main = print ((Vec [1, 2, 3]) |+ (Vec [2, 3, 4]))
 -- main = print ((Vec [1, 2, 3]) |. (Vec [2, 3, 4]))
--- main = print ((Vec [1, 2, 3] 3) |+| 5)
--- main = print ((Vec [1, 2, 3] 3) |*| 5)
+-- main = print ((Vec [1, 2, 3]) +| 5)
+-- main = print ((Vec [1, 2, 3]) *| 5)
